@@ -1,9 +1,6 @@
 import random
-#        2, 3, 4, 5, 6, 7, 8, 9, 10, J,  Q,  K,   A
-deck = [2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10, 11,
-         2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10, 11,
-         2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10, 11,
-         2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10, 11]
+#       2, 3, 4, 5, 6, 7, 8, 9, 10, J,  Q,  K,  A
+deck = [2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10, 11] * 4
 
 class normal_deck:
     def __init__(self):
@@ -15,7 +12,7 @@ class normal_deck:
             return -1
         else:
             self.amount = self.amount - 1
-        print(len(self.tempDeck))
+        print(self.tempDeck)
         card = self.tempDeck.pop(random.randint(0, len(self.tempDeck) - 1))
         return card
 
