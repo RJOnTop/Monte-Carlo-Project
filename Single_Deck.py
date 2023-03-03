@@ -23,3 +23,4 @@ class normal_deck:
         card = self.tempDeck[suit].pop(random.randint(0, length_of_suit))
         
         return card
+    
